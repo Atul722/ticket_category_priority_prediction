@@ -1,42 +1,48 @@
+# ==========================================
 # Flask Configuration
+# ==========================================
+
 FLASK_HOST = "0.0.0.0"
 FLASK_PORT = 8000
 
 
-# ==========================
+# ==========================================
 # Model Paths
-# ==========================
+# ==========================================
 
-CATEGORY_MODEL_PATH = r"artifacts\ticket_category_model.keras"
+CATEGORY_MODEL_PATH = "artifacts/ticket_category_model.keras"
 
-PRIORITY_MODEL_PATH = r"artifacts\ticket_priority_model.keras"
+PRIORITY_MODEL_PATH = "artifacts/ticket_priority_model.keras"
 
 
-# ==========================
+# ==========================================
 # Tokenizer Paths
-# ==========================
+# ==========================================
 
-CATEGORY_TOKENIZER_PATH = r"artifacts\tokenizer.pkl"
+CATEGORY_TOKENIZER_PATH = "artifacts/tokenizer.pkl"
 
-PRIORITY_TOKENIZER_PATH = r"artifacts\priority_tokenizer.pkl"
+PRIORITY_TOKENIZER_PATH = "artifacts/priority_tokenizer.pkl"
 
 
-# ==========================
+# ==========================================
 # Label Encoder Paths
-# ==========================
+# ==========================================
 
-CATEGORY_LABEL_ENCODER_PATH = r"artifacts\label_encoder.pkl"
+CATEGORY_LABEL_ENCODER_PATH = "artifacts/label_encoder.pkl"
 
-PRIORITY_LABEL_ENCODER_PATH = r"artifacts\priority_label_encoder.pkl"
+PRIORITY_LABEL_ENCODER_PATH = "artifacts/priority_label_encoder.pkl"
 
 
-# ==========================
+# ==========================================
 # Text Configuration
-# ==========================
+# ==========================================
 
 MAX_SEQUENCE_LENGTH = 100
 
-# MongoDB Configuration
+
+# ==========================================
+# MongoDB Configuration (Optional)
+# ==========================================
 
 MONGO_URL = "mongodb://localhost:27017"
 
