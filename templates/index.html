@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support Ticket Classifier</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card shadow-lg p-4 mt-5">
+
+        <h1 class="text-center mb-4">
+            🎫 Customer Support Ticket Classifier
+        </h1>
+
+        <form action="/predict" method="POST">
+
+            <div class="mb-3">
+
+                <label class="form-label">
+                    Enter Ticket Description
+                </label>
+
+                <textarea
+                    class="form-control"
+                    name="ticket_text"
+                    rows="6"
+                    placeholder="Example: Unable to login after password reset."
+                    required></textarea>
+
+            </div>
+
+            <div class="d-grid">
+
+                <button class="btn btn-primary btn-lg">
+
+                    Predict Ticket
+
+                </button>
+
+            </div>
+
+        </form>
+
+        {% if error %}
+
+        <div class="alert alert-danger mt-4 text-center">
+
+            {{ error }}
+
+        </div>
+
+        {% endif %}
+
+
+        {% if ticket_category %}
+
+        <div class="alert alert-success mt-4">
+
+            <h4 class="text-center mb-3">
+                Prediction Result
+            </h4>
+
+            <h5>
+                <strong>Ticket Category :</strong>
+                {{ ticket_category }}
+            </h5>
+
+            <h5>
+                <strong>Priority :</strong>
+                {{ ticket_priority }}
+            </h5>
+
+        </div>
+
+        {% endif %}
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
